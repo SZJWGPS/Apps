@@ -1,0 +1,199 @@
+/* 
+ * normal css style
+ */
+html, body {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+form label {
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* 
+ * common style 
+ */
+.padding-lf-rg {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.h3 {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	background-color: #14ea00;
+	line-height: 2em;
+	padding: 5px 10px;
+	color: #FFF;
+}
+.menu-hamburger {
+	width: 28px;
+	line-height: 0;
+	display: inline-block;
+}
+.menu-hamburger:after {
+	content: '';
+	display: inline-block;
+	border-top: 2px solid #fff;
+	width: 28px;
+}
+.menu-hamburger:before {
+	content: '';
+	display: inline-block;
+	border-bottom: 2px solid #fff;
+	width: 28px;
+}
+.menu-hamburger .menu-line {
+	width: 28px;
+	height: 2px;
+	line-height: 0px;
+	background-color: #FFF;
+	display: inline-block;
+}
+.h3 .title-text {
+	margin-left: 10px;
+}
+.icon-circle {
+	width: 48px;
+	height: 48px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 100%;
+	text-align: center;
+	border-radius: 48px;
+	border: 3px solid #FFF;
+}
+.count-value {
+	line-height: 22px;
+	margin-left: 10px;
+	text-align: right;
+}
+/* 
+ * begin top form style
+ */
+.head-form {
+	padding: 20px 5%;
+	color: #FFF;
+	background-color: #00c7d3;
+}
+.input-item {
+	display: inline-block;
+	width: 30%;
+	padding: 5px;
+	margin: 5px 10px;
+}
+.input-item .letter-spacing-15 {
+	letter-spacing: 15px;
+}
+.input-item .maring-lf-14 {
+	margin-left: -11px;
+}
+.input-item input, .input-item select {
+	color: #666;
+	outline: none;
+	text-align: left;
+	padding-left: 5px;
+}
+.input-item input.btn, .input-item select.btn {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.input-item input.laydate-icon {
+	width: 178px;
+	height: 33px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.sm-input {
+	width: 55px;
+}
+#search-type {
+	width: 80px;
+}
+#taxi-type, #staticType {
+	width: 178px;
+}
+#primary-btn {
+	color: #666;
+	width: 120px;
+}
+/* 
+ * end top form style
+ */
+
+/* 
+ * begin statistic-info 
+ */
+.summary-info {
+	padding-bottom: 40px;
+}
+.statisticItem {
+	margin-top: 20px;
+}
+.statisticItem ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.statisticItem ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 220px;
+	height: 85px;
+	line-height: 85px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: #FFF;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px #000;
+}
+#sum-deal-money {
+	background-color: cornflowerblue;
+}
+#sum-deal-money span.icon-circle {
+	font-size: 33px;
+}
+#sum-deal-count {
+	background-color: #4a9c04;
+}
+#sum-deal-count span.icon-circle {
+	background: url('../images/icon-hand.jpg') center center no-repeat;
+	background-size: 48px;
+}
+#sum-drive-distance, #sum-time {
+	background-color: #ff5151;
+}
+#sum-drive-distance span.icon-circle {
+	background: url('../images/icon-taxi.png') center center no-repeat;
+	background-size: 30px;
+}
+#sum-time span.icon-circle {
+	background: url('../images/icon-clock.png') center center no-repeat;
+	background-size: 30px;
+}
+/* 
+ * data table
+ */
+table tr th, table tr td {
+	text-align: center;
+}
+.data-table {
+	margin-bottom: 30px;
+}
+/* 
+ * echart
+ * single deal summary
+ */
+#deal-summary-pie, #deal_trend_one {
+	width:80%;
+	height: 550px;
+	margin: 15px auto;
+}

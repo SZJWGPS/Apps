@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>营运数据时间段查询</title>
+	<link rel="stylesheet" href="./publics/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./publics/libs/laydate/skins/default/laydate.css">
+	<link rel="stylesheet" href="./publics/libs/datatable/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="./publics/css/main.css">
+	<script type="text/javascript" src="./publics/libs/laydate/laydate.js"></script>
+	<script type="text/javascript" src="./publics/libs/jquery/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="./publics/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./publics/libs/datatable/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="./publics/libs/datatable/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid head-form">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<form action="/index.html" method="">
+					<span class="input-item">
+						<label for="startTime">开始时间: </label>
+						<input type="text" name="startDate" autocomplete="off"  id="startDate" class="laydate-icon btn">
+					</span>
+					<span class="input-item">
+						<label for="endTime">结束时间: </label>
+						<input type="text" name="endDate" autocomplete="off" id="endDate" class="laydate-icon btn">
+					</span>
+					<span class="input-item">
+						<label for="company" class="">企业名称: </label>
+						<span  id="" class="">
+							<input type="text" name="company" class="btn" id="companyName" >
+						</span>
+					</span>
+					<span class="input-item">
+						<label for="taxiType">车辆类型: </label>
+						<select name="taxi-type" id="taxi-type" class="btn">
+							<option value="全部">全部</option>
+							<option value="红的">红的</option>
+							<option value="绿的">绿的</option>
+							<option value="其他">其他</option>
+						</select>
+					</span>
+					<span class="input-item">
+						<label for="staticType">统计类型: </label>
+						<select name="staticType" id="staticType" class="btn">
+							<option value="企业">企业</option>
+							<option value="车辆">车辆</option>
+						</select>
+					</span>
+					<span class="input-item">
+						<button type="submit" id="primary-btn" class="btn primary-btn">查询</button>
+					</span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 padding-lf-rg">
+				<div class="summary-info">
+					<h3 class="h3">
+						<span class="menu-hamburger">
+							<span class="menu-line"></span>
+						</span>
+						<span class="title-text">营业额/交易量/营业里程统计</span>
+					</h3>
+					<div class="statisticItem">
+						<ul>
+							<li id="sum-deal-money">
+								<span class="icon-circle">￥</span>
+								<span class="count-value">100万元<br>总营业额</span>
+								<!-- <span class="itemName"></span> -->
+							</li>
+							<li id="sum-deal-count">
+								<span class="icon-circle"></span>
+								<span class="count-value">1000000笔<br>总交易量</span>
+							</li>
+							<li id="sum-time">
+								<span class="icon-circle"></span>
+								<span class="count-value">100小时<br>总候时</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="table-result">
+					<h3 class="h3">
+						<span class="menu-hamburger">
+							<span class="menu-line"></span>
+						</span>
+						<span class="title-text">查询结果</span>
+					</h3>
+					<div class="data-table">
+						<table id="table_id_example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					    <thead>
+				        <tr>
+				          <th>序号</th>
+				          <th>名称</th>
+				          <th>营业总数(笔)</th>
+				          <th>营业总额(元)</th>
+				          <th>日均营业额(元)</th>
+				          <th>总候时</th>
+				          <th>单笔平均候时</th>
+				        </tr>
+					    </thead>
+					    <tbody>
+					    </tbody>
+						</table>
+					</div>
+				</div>
+				<div class="single-deal-summary">
+					<h3 class="h3">
+						<span class="menu-hamburger">
+							<span class="menu-line"></span>
+						</span>
+						<span class="title-text">营业额及营业数走势</span>
+					</h3>
+					<div id="deal_trend_one"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+	<script src="./publics/js/common.js"></script>
+	<script src="./publics/js/index_2.js"></script>
+</body>
+</html>
